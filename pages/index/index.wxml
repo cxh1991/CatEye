@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="header">
+        <image class="header-bg" src="{{imgsrc}}"></image>
+        <view class="header_left">
+            <image src="{{imgsrc}}"></image>
+            <view></view>
+        </view>
+        <view class="header_right">
+            <text class="header_right-name mb4">{{name}}</text>
+            <text class="header_right-ename mb4">{{ver}}</text>
+            <view class="header_right-bd mb4">
+                <view>
+                    <text class="bd-title">观众评分</text>
+                    <text class="bd-score">{{score}}</text>
+                    <text class="bd-people">({{comment/10000}}人评)</text>
+                </view>
+            </view>
+            <view class="header_right-ft">
+                <!--<view class="font-desc flex"><view class="cinema-type">{{cat}}</view><view class="cinema-ways"><text class="cinema-3d" wx:if="{{threeD}}">3D</text><text class="cinema-imax" wx:if="{{imax}}">IMAX</text></view></view>-->
+                <view class="font-desc"><text class="cinema-src font-desc">{{country}}/{{duration}}分钟</text></view>
+                <view class="font-desc"><text class="cinema-date font-desc">{{showing}}</text></view>
+            </view>
+        </view>
+
+        <view class="header_button">
+            <view class="header_button-left"><text class="aixin">❤</text>想看</view>
+            <view class="header_button-right"><text class="star">★</text>评分</view>
+        </view>
+    </view>
+    <view class="bd-tips">小提示：剧尾将有彩蛋</view>
+
+    <view class="container-desc">
+        <text class="container-desc_text" style="{{hideText?'-webkit-line-clamp:3':''}}">{{dra}}</text>
+        <image class="{{hideClass}}" wx:if="'up=={{hideClass}}'?'':'down'" bindtap="showall" src="../../image/icon_d_arrow_down.png" />
+    </view>
+
+    <view class="banner">
+        <text class="banner_title">演职人员</text>
+        <scroll-view scroll-x="true" class="banner_contain">
+            <view class="banner_contain-cinema" wx:for="{{items0}}" wx:for-item="item">
+                <image src="{{item.image}}"></image>
+                <text class="cinema-name">{{item.name}}</text>
+                <text class="cinema-work">{{item.work}}</text>
+            </view>
+        </scroll-view>
+    </view>
+
+    <view class="banner">
+        <text class="banner_title">票房</text>
+        <view class="banner_contain">
+            <view class="banner_contain-boxOffice" wx:for="{{items1}}" wx:for-item="item">
+                <text class="cinema-data">{{item.data}}</text>
+                <text class="cinema-record">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="banner">
+        <text class="banner_title">视频和剧照</text>
+        <scroll-view scroll-x="true" class="banner_contain">
+            <view class="banner_contain-cinema" wx:for="{{items0}}" wx:for-item="item">
+                <image src="{{item.image}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+
+    <view class="banner">
+        <view class="banner-content">
+            <view class="banner_title">
+                观众评论
+                <view class="banner_contain-btn">
+                    <text class="banner_contain-inner">写短评</text>
+                </view>
+            </view>
+            <view class="banner_contain-comment" wx:for="{{comments}}" wx:item="{{item}}">
+                <view class="comment-avatar">
+                    <image src="{{item.avatarurl}}"></image>
+                </view>
+                <view class="comment-bd">
+                    <text class="comment-id">{{item.nickName}}<text class="comment-go">购</text></text>
+                    <view class="comment-star">
+                        <image src="http://ms0.meituan.net/canary/img/star-full-new.png"></image>
+                        <image src="http://ms0.meituan.net/canary/img/star-full-new.png"></image>
+                        <image src="http://ms0.meituan.net/canary/img/star-full-new.png"></image>
+                        <image src="http://ms0.meituan.net/canary/img/star-full-new.png"></image>
+                        <image src="http://ms0.meituan.net/canary/img/star-full-new.png"></image>
+                    </view>
+                    <view class="comment-inner">{{item.content}}</view>
+                    <view class="comment-date">{{item.time}}
+                        <view class="comment-zan" bindtap="zan" data-num="{{index}}" data-zan="{{item.oppose}}">{{item.approve}}</view>
+                        <image data-zan="{{item.oppose}}" bindtap="zan" data-num="{{index}}" class="icon-zan" src="{{item.oppose==1?'../../image/icon-s.png':'../../image/icon-n.png'}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>

@@ -1,0 +1,21 @@
+@import '../../weui.wxss';
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.desc {
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    margin-left: 75px;
+}
+
+.desc text {
+    color: #ff9900;
+    text-decoration: underline;
+    margin-left: 8px;
+}

@@ -1,0 +1,27 @@
+<view class="movie">
+  <!--<view class="head">
+  <text class="tab choose">{{tab1}}</text>
+  <text class="tab">{{tab2}}</text>
+</view>
+-->
+
+  <!-- 电影列表 -->
+  <scroll-view class="list">
+    <view class="card" wx:for="{{infos}}">
+      <image bindtap="detail" id="{{item.id}}" src="{{item.img}}" mode="widthFix" style="width:250rpx;height=250rpx"></image>
+      <view class="info" bindtap="detail" id="{{item.id}}">
+        <view class="f-name">
+          <text class="info_item" style="font-size:12pt;font-weight:bold">{{item.nm}}</text>
+          <text class="threeD" wx:if="{{item['3d']}}">3D</text>
+        </view>
+        <view class="info_item" style="display:flex;flex-direction:row;align-items:center">
+          <text style="font-size:10pt;color:#D9D9D9">评分：</text>
+          <text style="font-size:12pt;color:orange">{{item.sc}}</text>
+        </view>
+        <text class="info_item" style="font-size:10pt;color:gray">{{item.scm}}</text>
+        <text class="info_item" style="font-size:10pt;color:gray">{{item.showInfo}}</text>
+      </view>
+      <button class="buy" bindtap="buyTickets">购买</button>
+    </view>
+  </scroll-view>
+</view>

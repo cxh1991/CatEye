@@ -1,0 +1,104 @@
+<view class="container">
+    <scroll-view>
+        <view class="header">
+            <view class="header_hd" bindtap="goLocaltion"><text>{{city}}</text>
+                <view class="downtips"></view>
+            </view>
+            <view class="header_bd">
+                <view class="header_bd-hot" style="color:{{isleft?'#ef4238':'#666'}}" bindtap="tabChangehot">热映</view>
+                <view class="header_bd-waiting check" style="color:{{isleft?'#666':'#ef4238'}}" bindtap="tabChangewaiting">待映</view>
+                <view class="bottomLine" style="left:{{isleft?'43px':'113px'}}"></view>
+            </view>
+            <view class="header_ft">
+                <image src="../../image/icon_magnifier.png"></image>
+            </view>
+        </view>
+
+        <view wx:for="{{items}}" wx:key="item" hidden="{{!isleft}}">
+            <view class="flex item" bindtap="bindViewTap" hover="true" hover-class="gray_hover" hover-stay-time="100" bindtap="BuyIt" data-td="{{item['3d']}}" id="{{item.id}}">
+                <view class="item_left">
+                    <image src="{{item.img}}" />
+                </view>
+                <view class="item_middle">
+                    <view class="flex_auto">
+                        <text class="title">{{item.nm}}</text>
+                        <view class="cinema-ways">
+                            <text class="cinema-3d" wx:if="{{item['3d']}}">3D</text>
+                            <text class="cinema-imax" wx:if="{{item.imax}}">IMAX</text>
+                        </view>
+                    </view>
+
+                    <view>
+                        <text class="type font-desc">{{item.cat}}</text>
+                    </view>
+                    <view>
+                        <text class="actor font-desc">主演：{{item.star}}</text>
+                    </view>
+                    <view>
+                        <text class="desc font-desc">{{item.showInfo}}</text>
+                    </view>
+                </view>
+                <view class="item_right">
+                    <view>
+                        <text class="score" wx:if="{{item.preSale==1}}">{{item.wish}}<text style="font-size:12px;">人想看</text></text>
+                        <text class="score" wx:if="{{item.preSale==0}}">{{item.sc}}<text style="font-size:12px;">分</text></text>
+                    </view>
+                    <view>
+                        <text class="buy" style="background-color:{{item.preSale==1?'#52b0eb':'#ef4238'}}">{{item.preSale==1?'预售':'购票'}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view hidden="{{isleft}}">
+            <view class="banner">
+                <text class="banner_title">近期最受欢迎</text>
+                <scroll-view scroll-x="true" class="banner_contain">
+                    <view class="banner_contain-cinema" wx:for="{{items0}}" wx:for-item="item">
+                        <image src="{{item.img}}"></image>
+                        <view class="cinema-zan">
+                            <image id="zan" src="{{item.zan?'../../image/icon-zan_selected.png':'../../image/icon-zan_normal.png'}}" bindtap="doIt" data-num="{{index}}" data-zan="{{item.zan}}"></image>
+                        </view>
+                        <text class="cinema-title font-desc">{{item.nm}}</text>
+                        <text class="cinema-people font-desc">{{item.wish}}人想看</text>
+                        <text class="cinema-date font-desc">{{item.rt}}</text>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="flex item" wx:for="{{items}}" wx:key="item" bindtap="bindViewTap" hover="true" hover-class="gray_hover" hover-stay-time="100" bindtap="BuyIt" data-td="{{item['3d']}}" id="{{item.id}}">
+                <view class="item_left">
+                    <image src="{{item.img}}" />
+                </view>
+                <view class="item_middle">
+                    <view class="flex_auto">
+                        <text class="title">{{item.nm}}</text>
+                        <view class="cinema-ways">
+                            <text class="cinema-3d" wx:if="{{item['3d']}}">3D</text>
+                            <text class="cinema-imax" wx:if="{{item.imax}}">IMAX</text>
+                        </view>
+                    </view>
+
+                    <view>
+                        <text class="type font-desc">{{item.cat}}</text>
+                    </view>
+                    <view>
+                        <text class="actor font-desc">主演：{{item.star}}</text>
+                    </view>
+                    <view>
+                        <text class="desc font-desc">{{item.showInfo}}</text>
+                    </view>
+                </view>
+                <view class="item_right">
+                    <view>
+                        <text class="score" wx:if="{{item.preSale==1}}">{{item.wish}}<text style="font-size:12px;">人想看</text></text>
+                        <text class="score" wx:if="{{item.preSale==0}}">{{item.sc}}<text style="font-size:12px;">分</text></text>
+                    </view>
+                    <view>
+                        <text class="buy" style="background-color:{{item.preSale==1?'#52b0eb':'#ef4238'}}">{{item.preSale==1?'预售':'购票'}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </scroll-view>
+</view>

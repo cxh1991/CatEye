@@ -1,0 +1,423 @@
+/**app.wxss**/
+
+.container {
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box
+}
+
+page {
+    background-color: #f2f2f2;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_auto {
+    flex: 1
+}
+
+
+/**
+ * 猫眼电影 - the maoyan movie project, building by @myfe .
+ * @author @myfe
+ * @version v1.0.8
+ * @link http://m.maoyan.com
+ * @license MIT
+ */
+
+.maoyan .banner,
+.maoyan .navbar,
+.maoyan .footer,
+.maoyan .navload,
+.maoyan .download {
+    display: none
+}
+
+@font-face {
+    font-family: 'myfont';
+    src: url('../fonts/myfont-a3a033f3.eot');
+    src: url('../fonts/myfont-a3a033f3.eot#iefix') format('eot'), url('../fonts/myfont-d3efdd5e.woff') format('woff'), url('../fonts/myfont-ab2fa31d.ttf') format('truetype'), url('../fonts/myfont-a3a033f3.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+.icon {
+    font-size: 1em;
+    line-height: 1em;
+    display: inline;
+    vertical-align: middle
+}
+
+.icon:before {
+    line-height: 1;
+    display: inline-block;
+    font-family: 'myfont';
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%
+}
+
+.icon-2x {
+    font-size: 2em
+}
+
+.icon-3x {
+    font-size: 3em
+}
+
+.icon-4x {
+    font-size: 4em
+}
+
+.icon-5x {
+    font-size: 5em
+}
+
+.icon-fw {
+    width: 1.28571429em;
+    text-align: center
+}
+
+.icon-rotate-30:before {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg)
+}
+
+.icon-rotate-60:before {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg)
+}
+
+.icon-rotate-90:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.icon-rotate-180:before {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.icon-rotate-270:before {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+.icon-vip:before {
+    content: "\EA44"
+}
+
+.icon-venus:before {
+    content: "\EA43"
+}
+
+.icon-v5:before {
+    content: "\EA42"
+}
+
+.icon-v4:before {
+    content: "\EA41"
+}
+
+.icon-v3:before {
+    content: "\EA40"
+}
+
+.icon-v2:before {
+    content: "\EA3F"
+}
+
+.icon-v1:before {
+    content: "\EA3E"
+}
+
+.icon-ugc-raise:before {
+    content: "\EA3D"
+}
+
+.icon-ugc-fall:before {
+    content: "\EA3C"
+}
+
+.icon-timer:before {
+    content: "\EA3B"
+}
+
+.icon-ticket:before {
+    content: "\EA3A"
+}
+
+.icon-success:before {
+    content: "\EA39"
+}
+
+.icon-star-v2:before {
+    content: "\EA38"
+}
+
+.icon-star-half2:before {
+    content: "\EA37"
+}
+
+.icon-signal:before {
+    content: "\EA36"
+}
+
+.icon-share:before {
+    content: "\EA35"
+}
+
+.icon-seat:before {
+    content: "\EA34"
+}
+
+.icon-rules:before {
+    content: "\EA33"
+}
+
+.icon-right-ticket:before {
+    content: "\EA32"
+}
+
+.icon-right-rest:before {
+    content: "\EA31"
+}
+
+.icon-remove:before {
+    content: "\EA30"
+}
+
+.icon-remove-sign:before {
+    content: "\EA2F"
+}
+
+.icon-remove-narrow:before {
+    content: "\EA2E"
+}
+
+.icon-remove-circle:before {
+    content: "\EA2D"
+}
+
+.icon-phone:before {
+    content: "\EA2C"
+}
+
+.icon-paper:before {
+    content: "\EA2B"
+}
+
+.icon-ok:before {
+    content: "\EA2A"
+}
+
+.icon-ok-sign2:before {
+    content: "\EA29"
+}
+
+.icon-ok-sign:before {
+    content: "\EA28"
+}
+
+.icon-ok-circle:before {
+    content: "\EA27"
+}
+
+.icon-music:before {
+    content: "\EA26"
+}
+
+.icon-movie:before {
+    content: "\EA25"
+}
+
+.icon-mars:before {
+    content: "\EA24"
+}
+
+.icon-local:before {
+    content: "\EA23"
+}
+
+.icon-highlights:before {
+    content: "\EA22"
+}
+
+.icon-heart:before {
+    content: "\EA21"
+}
+
+.icon-heart-empty:before {
+    content: "\EA20"
+}
+
+.icon-hand:before {
+    content: "\EA1F"
+}
+
+.icon-fail:before {
+    content: "\EA1E"
+}
+
+.icon-eye:before {
+    content: "\EA1D"
+}
+
+.icon-edit:before {
+    content: "\EA1C"
+}
+
+.icon-delete:before {
+    content: "\EA1B"
+}
+
+.icon-comment:before {
+    content: "\EA1A"
+}
+
+.icon-collect-tag:before {
+    content: "\EA19"
+}
+
+.icon-close:before {
+    content: "\EA18"
+}
+
+.icon-chevron-up:before {
+    content: "\EA17"
+}
+
+.icon-chevron-right:before {
+    content: "\EA16"
+}
+
+.icon-chevron-left:before {
+    content: "\EA15"
+}
+
+.icon-chevron-down:before {
+    content: "\EA14"
+}
+
+.icon-caret-up:before {
+    content: "\EA13"
+}
+
+.icon-caret-right:before {
+    content: "\EA12"
+}
+
+.icon-caret-left:before {
+    content: "\EA11"
+}
+
+.icon-caret-down:before {
+    content: "\EA10"
+}
+
+.icon-badge:before {
+    content: "\EA0F"
+}
+
+.icon-arrow-thin-left:before {
+    content: "\EA0E"
+}
+
+.icon-arrow-right:before {
+    content: "\EA0D"
+}
+
+.icon-arrow-down:before {
+    content: "\EA0C"
+}
+
+.icon-arrow-double:before {
+    content: "\EA0B"
+}
+
+.icon-approved:before {
+    content: "\EA0A"
+}
+
+.icon-approve:before {
+    content: "\EA09"
+}
+
+.icon-angle-up:before {
+    content: "\EA08"
+}
+
+.icon-angle-right:before {
+    content: "\EA07"
+}
+
+.icon-angle-left:before {
+    content: "\EA06"
+}
+
+.icon-angle-down:before {
+    content: "\EA05"
+}
+
+.icon-alert:before {
+    content: "\EA04"
+}
+
+.icon-add2:before {
+    content: "\EA03"
+}
+
+.icon-add:before {
+    content: "\EA02"
+}
+
+.icon-abc:before {
+    content: "\EA01"
+}
+
+.icon-replay:before {
+    content: "\91CD"
+}
+
+.icon-pause:before {
+    content: "\6682"
+}
+
+.icon-play-circle:before {
+    content: "\64AD"
+}
+
+.icon-home:before {
+    content: "\5BB6"
+}
+
+.icon-fullscreen:before {
+    content: "\5168"
+}
+
+.icon-star-half:before {
+    content: "\2736"
+}
+
+.icon-star-o:before {
+    content: "\2606"
+}
+
+.icon-star:before {
+    content: "\2605"
+}
+
+.icon-approved {
+    font-size: 1.1em
+}

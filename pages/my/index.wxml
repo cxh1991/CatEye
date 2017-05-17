@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="page">
+        <view class="page__bd" style="margin-top: 10px;">
+            <view class="weui-cells weui-cells_after-title">
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="100">
+                    <view class="weui-cell__bd">我的订单</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="100">
+                    <view class="weui-cell__bd">优惠券</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="100">
+                    <view class="weui-cell__bd">影院会员卡</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+            </view>
+
+            <view class="weui-cells weui-cells_after-title" style="margin-top: 20px;">
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="100">
+                    <view class="weui-cell__bd">想看的电影</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="100">
+                    <view class="weui-cell__bd">看过的电影</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+    <view class="desc">@猫眼电影 <text>客服电话：1010-5335</text></view>
+</view>
